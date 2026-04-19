@@ -17,3 +17,10 @@ spec:
             name: event-service
             port:
               number: 8000
+      - path: /api/participants
+        pathType: Prefix
+        backend:
+          service:
+            name: participant-service
+            port:
+              number: 8000

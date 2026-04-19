@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: participant-service
-        image: mmajora53/eventhub-participant:latest
+        image: claraaitm/eventhub-participant:latest
         ports:
         - containerPort: 8000
         env:
