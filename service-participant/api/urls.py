@@ -5,7 +5,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 router = DefaultRouter()
 router.register(r'events', EventViewSet)
-router.register(r'participants', ParticipantViewSet)
+router.register(r'participants', ParticipantViewSet, basename='participant')
 router.register(r'registrations', RegistrationViewSet)
 
 urlpatterns = [

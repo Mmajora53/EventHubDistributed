@@ -39,7 +39,7 @@ class EventViewSet(viewsets.ModelViewSet):
 class ParticipantViewSet(viewsets.ModelViewSet):
     queryset = Participant.objects.all()
     serializer_class = ParticipantSerializer
-    permission_classes = [IsAdminOrReadOnly]
+    permission_classes = [permissions.AllowAny]
 
 class RegistrationViewSet(viewsets.ModelViewSet):
     queryset = Registration.objects.all()
