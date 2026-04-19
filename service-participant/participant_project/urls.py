@@ -1,5 +1,5 @@
 """
-URL configuration for eventhub_project project.
+URL configuration for participant_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
