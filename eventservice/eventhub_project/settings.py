@@ -24,11 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
+DEBUG = True
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-0cuc%9ikmswm*+kx@=hk3a3x^-ct$m=h0(1xa+wz-p1a5hf25a')
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 if os.environ.get('RENDER_HOST'):
     ALLOWED_HOSTS.append(os.environ.get('RENDER_HOST'))
 
