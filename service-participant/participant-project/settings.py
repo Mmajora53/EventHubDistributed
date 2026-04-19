@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'eventhub_project.urls'
+ROOT_URLCONF = 'participant_project.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'eventhub_project.wsgi.application'
+WSGI_APPLICATION = 'participant_project.wsgi.application'
 
 
 # Database
