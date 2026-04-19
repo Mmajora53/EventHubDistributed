@@ -29,9 +29,7 @@ DEBUG = True
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-0cuc%9ikmswm*+kx@=hk3a3x^-ct$m=h0(1xa+wz-p1a5hf25a')
 
 ALLOWED_HOSTS = ['*']
-if os.environ.get('RENDER_HOST'):
-    ALLOWED_HOSTS.append(os.environ.get('RENDER_HOST'))
-
+CORS_ALLOW_ALL_ORIGINS = True   # à sécuriser plus tard
 
 # Application definition
 
