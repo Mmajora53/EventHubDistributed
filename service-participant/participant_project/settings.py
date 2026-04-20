@@ -86,10 +86,9 @@ WSGI_APPLICATION = 'participant_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': ':memory:' if os.getenv('DJANGO_TEST') else 'db.sqlite3',
     }
 }
-
 # If running on Render (or another host) and DATABASE_URL exists, replace the default database settings!
 if 'DATABASE_URL' in os.environ:
     DATABASES['default'] = dj_database_url.config(

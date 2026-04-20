@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
+from django.views.generic import RedirectView
 
-def health_check(request):
+def healthcheck(request):
     return JsonResponse({"status": "ok", "message": "L'API EventHub fonctionne !"})
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
+    path('', RedirectView.as_view(url='/api/', permanent=False)), 
 ]

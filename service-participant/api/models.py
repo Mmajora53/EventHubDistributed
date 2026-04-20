@@ -22,6 +22,8 @@ class Participant(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
+    event_id = models.IntegerField(null=True, blank=True)   # ← temporairement nullable
+    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

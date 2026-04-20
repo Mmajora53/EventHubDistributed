@@ -1,4 +1,5 @@
 from rest_framework import viewsets, permissions
+from django.http import JsonResponse
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Event, Participant, Registration, UserProfile
 from .serializers import EventSerializer, ParticipantSerializer, RegistrationSerializer
@@ -10,6 +11,10 @@ from rest_framework.authtoken.models import Token
 from django.shortcuts import get_object_or_404
 from django.contrib.auth import authenticate
 from datetime import date
+
+def list_participants(request):
+    participants = list(Participant.objects.values())
+    return JsonResponse({"participants": participants})
 
 class IsAdminOrReadOnly(permissions.BasePermission):
     def has_permission(self, request, view):
