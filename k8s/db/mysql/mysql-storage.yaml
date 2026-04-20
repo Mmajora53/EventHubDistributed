@@ -19,7 +19,7 @@ metadata:
   name: mysql-pv-claim
   namespace: eventhub
 spec:
-  storageClassName: manual
+  storageClassName: standard
   accessModes:
     - ReadWriteOnce
   resources:
