@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: participant-service
-        image: claraaitm/eventhub-participant:latest
+        image: mariaa04/eventhub-participant:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
@@ -29,3 +29,12 @@ spec:
             secretKeyRef:
               name: mysql-secret
               key: password
+        
+        volumeMounts:
+        - name: media-volume
+          mountPath: /app/media          # Chemin où Django va stocker les fichiers (images, etc.)
+      
+      volumes:
+      - name: media-volume
+        persistentVolumeClaim:
+          claimName: eventhub-files-pvc
