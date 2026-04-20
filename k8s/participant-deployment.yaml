@@ -16,8 +16,16 @@ spec:
       containers:
       - name: participant-service
         image: claraaitm/eventhub-participant:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
         env:
         - name: DEBUG
           value: "True"
+        - name: MYSQL_HOST
+          value: "mysql"
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: password

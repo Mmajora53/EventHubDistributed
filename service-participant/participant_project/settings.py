@@ -85,10 +85,18 @@ WSGI_APPLICATION = 'participant_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': ':memory:' if os.getenv('DJANGO_TEST') else 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'eventhub_db',
+        'USER': 'root',
+        'PASSWORD': os.getenv('MYSQL_ROOT_PASSWORD', 'test1234'),
+        'HOST': os.getenv('MYSQL_HOST', 'mysql'),
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
+
 # If running on Render (or another host) and DATABASE_URL exists, replace the default database settings!
 if 'DATABASE_URL' in os.environ:
     DATABASES['default'] = dj_database_url.config(
