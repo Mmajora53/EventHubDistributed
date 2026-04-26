@@ -28,7 +28,7 @@ Les étapes bonus (déploiement cloud + sécurisation avancée avec Istio/mTLS) 
 | Langage                | Python 3.12 + Django REST Framework           |
 | Conteneurisation       | Docker (`python:3.12-slim`)                   |
 | Orchestration          | Kubernetes via Minikube (v1.35.1)             |
-| Registry               | Docker Hub (`mariaa04/`)                      |
+| Registry               | Docker Hub (`mariaa04/ , claraaitm/`)                      |
 | Ingress / Gateway      | NGINX Ingress Controller                      |
 | Base de données        | MySQL 8.0.45                                  |
 | Stockage fichiers      | PersistentVolume + PersistentVolumeClaim      |
