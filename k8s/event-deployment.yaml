@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: event-service
-        image: claraaitm/eventhub-event:latest
+        image: mariaa04/eventservice:latest
         ports:
         - containerPort: 8000
 ---
