@@ -99,7 +99,7 @@ Endpoints principaux :
 
 
 ## Arborescence
-
+```
 EventHubDistributed/
 ├── eventservice/               # Code du premier microservice
 ├── service-participant/        # Code du second microservice
@@ -111,7 +111,7 @@ EventHubDistributed/
 │   └── participant-deployment.yaml
 ├── Dockerfile (dans chaque service)
 └── README.md
-
+```
 
 ## Contributeurs 
 
